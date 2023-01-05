@@ -2,18 +2,152 @@ body {
   margin: 0;
   padding: 0;
   font-family: "Montserrat", sans-serif;
+  font-style: italic;
+  color: #5784BA;
+  position: relative;
 }
 body header {
-  height: 30vw;
+  opacity: 0.9;
+  background-color: white;
+  z-index: 1;
+  position: fixed;
+  top: 0px;
+  width: 100%;
+  height: 30vh;
   text-align: center;
   font-size: 1rem;
 }
 body header h1 {
-  margin-bottom: 5rem;
   font-family: "Seymour One", sans-serif;
 }
-body main .createEvent {
+body header .createEvent {
   display: flex;
   flex-direction: column;
   text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+body header .createEvent .inputTXT, body header .createEvent .date {
+  width: 80vw;
+  height: 2vh;
+  border-radius: 5px;
+  background-color: #AAD2F5;
+  border: 0;
+}
+body header .createEvent .buttonForm {
+  margin-top: 5vw;
+  width: 40vw;
+  background: linear-gradient(to bottom, #5783ba 5%, #5783ba 100%);
+  background-color: #5783ba;
+  border-radius: 15px;
+  border: 2px solid #5783ba;
+  display: inline-block;
+  cursor: pointer;
+  color: #ffffff;
+  font-family: Trebuchet MS;
+  font-size: 20px;
+  font-weight: bold;
+  padding: 12px 16px;
+  text-decoration: none;
+}
+body header .createEvent .buttonForm:hover {
+  background: linear-gradient(to bottom, #5783ba 5%, #5783ba 100%);
+  background-color: #5783ba;
+}
+body header .createEvent .buttonForm:active {
+  position: relative;
+  top: 1px;
+}
+body main {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30vh;
+}
+body main .event {
+  margin-top: 2vh;
+  margin-bottom: 2vh;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  color: black;
+  border-radius: 5px/5px;
+  border: 3px solid #F4CFDF;
+  height: 30vh;
+  width: 80vw;
+  background-color: #F4CFDF;
+}
+body main .event section {
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  align-items: center;
+}
+body main .event .description {
+  background-color: #FFFFFF;
+  width: 98%;
+  height: 30%;
+}
+body main .event table {
+  width: 100%;
+  text-align: center;
+}
+body main .event table .inputTXT {
+  border: 0;
+  width: 90%;
+}
+body main .event .ok {
+  background-color: #B5E48C;
+}
+body main .event .no {
+  background-color: #FCA8A8;
+}
+body main .event .name {
+  background-color: #FFFFFF;
+  width: 10%;
+}
+body main .event .addGuy {
+  width: 100%;
+}
+body main .event .buttonDate, body main .event .buttonLeftMiddle, body main .event .buttonDel {
+  width: 20vw;
+  opacity: 0.7;
+  border-radius: 15px;
+  display: inline-block;
+  cursor: pointer;
+  color: #3A587C;
+  font-family: Trebuchet MS;
+  font-size: 20px;
+  font-weight: bold;
+  padding: 12px 16px;
+  text-decoration: none;
+}
+body main .event .buttonDate:hover, body main .event .buttonLeftMiddle:hover, body main .event .buttonDel:hover {
+  opacity: 1;
+}
+body main .event .buttonDate:active, body main .event .buttonLeftMiddle:active, body main .event .buttonDel:active {
+  position: relative;
+  top: 1px;
+}
+body main .event .buttonDate {
+  margin-top: 2vw;
+  width: 40vw;
+  background-color: #F4CFDF;
+  border: 5px solid #FFFFFF;
+}
+body main .event .buttonLeftMiddle, body main .event .buttonDel {
+  margin-top: 3vw;
+  margin-left: 1vw;
+  margin-right: 1vw;
+}
+body main .event .buttonLeftMiddle {
+  background-color: #FFFFFF;
+  border: 5px solid #FFFFFF;
+}
+body main .event .buttonDel {
+  background-color: #FCA8A8;
+  border: 5px solid #FCA8A8;
 }/*# sourceMappingURL=style.css.map */

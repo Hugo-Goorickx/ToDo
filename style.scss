@@ -4,24 +4,182 @@ $pink: #FCA8A8;
 $dark-blue: #5784BA;
 $light-pink:#F4CFDF;
 $text-color:#3A587C;
-body{
+body
+{
     margin: 0;
     padding: 0;
     font-family: 'Montserrat', sans-serif;
-    header{ 
-        height: 30vw;
+    font-style: italic;
+    color: #5784BA;
+    position: relative;
+    header
+    { 
+        opacity: 0.9;
+        background-color: white;
+        z-index: 1;
+        position : fixed; 
+        top: 0px;
+        width: 100%;
+        height: 30vh;
         text-align: center;
         font-size: 1rem; 
-        h1{
-            margin-bottom: 5rem;
+        h1
+        {
             font-family: 'Seymour One', sans-serif;
         }
-    }
-    main{
-        .createEvent{
+        .createEvent
+        {
             display: flex;
             flex-direction: column;
             text-align: center;
+            justify-content: center;
+            align-items: center;
+            .inputTXT, .date
+            {
+                width: 80vw;
+                height: 2vh;
+                border-radius: 5px;
+                background-color: #AAD2F5;
+                border: 0;
+            }
+            .buttonForm
+            {
+                margin-top: 5vw;
+                width: 40vw;
+                background:linear-gradient(to bottom, #5783ba 5%, #5783ba 100%);
+                background-color:#5783ba;
+                border-radius:15px;
+                border:2px solid #5783ba;
+                display:inline-block;
+                cursor:pointer;
+                color:#ffffff;
+                font-family:Trebuchet MS;
+                font-size:20px;
+                font-weight:bold;
+                padding:12px 16px;
+                text-decoration:none;
+                &:hover
+                {
+                    background:linear-gradient(to bottom, #5783ba 5%, #5783ba 100%);
+                    background-color:#5783ba;
+                }
+                &:active
+                {
+                    position:relative;
+                    top:1px;
+                }
+            }
+        }
+    }
+    main
+    {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        margin-top: 30vh;
+
+        .event
+        {
+            margin-top: 2vh;
+            margin-bottom: 2vh;
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            align-items: center;
+            color: black;
+            border-radius: 5px / 5px; 
+            border: 3px solid #F4CFDF;
+            height: 30vh;
+            width: 80vw;
+            background-color: #F4CFDF;
+            section
+            {
+                display: flex;
+                flex-direction: row;
+                text-align: center;
+                align-items: center;
+            }
+            .description
+            {
+                background-color: #FFFFFF;
+                width: 98%;
+                height: 30%;
+            }
+            table
+            {
+                width: 100%;
+                text-align: center;
+                .inputTXT
+                {
+                    border: 0;
+                    width: 90%;
+                }
+            }
+            .ok
+            {
+                background-color: #B5E48C;
+            }
+            .no
+            {
+                background-color: #FCA8A8;
+            }
+            .name
+            {
+                background-color: #FFFFFF;
+                width: 10%;
+            }   
+            .addGuy
+            {
+                width: 100%;
+            }
+            .buttonDate, .buttonLeftMiddle, .buttonDel
+            {
+                width: 20vw;
+                opacity: 0.7;
+                border-radius:15px;
+                display:inline-block;
+                cursor:pointer;
+                color:#3A587C;
+                font-family:Trebuchet MS;
+                font-size:20px;
+                font-weight:bold;
+                padding:12px 16px;
+                text-decoration:none;
+                &:hover
+                {
+                    opacity: 1;
+                }
+                &:active
+                {
+                    position:relative;
+                    top:1px;
+                }
+            }
+            .buttonDate
+            {
+                margin-top: 2vw;
+                width: 40vw;
+                background-color:#F4CFDF;
+                border:5px solid #FFFFFF;
+            }
+            .buttonLeftMiddle, .buttonDel
+            {
+                margin-top: 3vw;
+                margin-left: 1vw;
+                margin-right: 1vw;
+            }
+            .buttonLeftMiddle
+            {
+                background-color:#FFFFFF;
+                border:5px solid #FFFFFF;
+            }
+            .buttonDel
+            {
+                background-color:#FCA8A8;
+                border:5px solid #FCA8A8;
+            }
         }
     }
 }
