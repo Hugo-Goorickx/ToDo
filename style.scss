@@ -1,0 +1,26 @@
+//variables
+$beige: #F7F6CF;
+$light-blue:#B6D8F2;
+$pink: #F4CFDF;
+$dark-blue: #5784BA;
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    header{ 
+        height: 30vw;
+        text-align: center;
+        font-size: 1rem; 
+        h1{
+            margin-bottom: 5rem;
+            font-family: 'Seymour One', sans-serif;
+        }
+    }
+    main{
+        .createEvent{
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+        }
+    }
+}
