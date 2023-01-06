@@ -4,7 +4,7 @@
  * @param {string} method Stock the method (GET, POST,...)
  * @param {*} object The object for the body fetch
  */
-function fetchP(method, object)
+export function fetchP(method, object)
 {
     this.method = method;
     this.headers = {
@@ -20,7 +20,7 @@ function fetchP(method, object)
  * @param {*} method What we do on the API
  * @returns The object gives by the fetch
  */
-async function fetchParams(link, method)
+ export async function fetchParams(link, method)
 {
     let linkGlob = `http://127.0.0.1:3000`;
     const response = await fetch(linkGlob + link, method);
@@ -34,7 +34,7 @@ async function fetchParams(link, method)
  * 
  * @returns array objects return by the fetch(all events)
  */
-async function giveAllEventsAPI()
+export async function giveAllEventsAPI()
 {
     let method = {
         method: 'GET'
@@ -48,7 +48,7 @@ async function giveAllEventsAPI()
  * @param {string} id event's id
  * @returns object return by fetch (the id's event)
  */
-async function giveOneEventAPI(id)
+export async function giveOneEventAPI(id)
 {
     let method = {
         method: 'GET'
@@ -62,7 +62,7 @@ async function giveOneEventAPI(id)
  * @param {*} object Object with : name, dates[], author, description
  * @returns object return by fetch
  */
-async function pushEventAPI(object)
+export async function pushEventAPI(object)
 {
     let method = new fetchP('POST', object);
     return await fetchParams(`/api/events/`, method)
@@ -75,7 +75,7 @@ async function pushEventAPI(object)
  * @param {*} object object with : description, name, author
  * @returns event update
  */
-async function updateEventAPI(id, object)
+export async function updateEventAPI(id, object)
 {
     let method = new fetchP('PATCH', object);
     return await fetchParams(`/api/events/` + id + `/`, method)
@@ -87,7 +87,7 @@ async function updateEventAPI(id, object)
  * @param {string} id the event's id
  * @returns succes or error
  */
-async function deleteEventAPI(id)
+export async function deleteEventAPI(id)
 {
     let method = {
                     method: 'DELETE'
@@ -101,7 +101,7 @@ async function deleteEventAPI(id)
  * @param {*} object object with : dates[]
  * @returns object of the event
  */
-async function updateDatesEventAPI(id, object)
+export async function updateDatesEventAPI(id, object)
 {
     let method = new fetchP('POST', object);
     return await fetchParams((`/api/events/` + id + `/add_dates`), method)
@@ -114,7 +114,7 @@ async function updateDatesEventAPI(id, object)
  * @param {*} object The object to include in API
  * @returns 
  */
-async function addPeopleEventAPI(id, object)
+export async function addPeopleEventAPI(id, object)
 {
     let method = new fetchP('POST', object);
     return await fetchParams((`/api/events/` + id + `/attend`), method)
@@ -127,7 +127,7 @@ async function addPeopleEventAPI(id, object)
  * @param {*} object The object with datas to update in API
  * @returns 
  */
-async function updatePeopleEventAPI(id, object)
+export async function updatePeopleEventAPI(id, object)
 {
     let method = new fetchP('PATCH', object);
     return await fetchParams((`/api/events/` + id + `/attend`), method)
@@ -153,7 +153,7 @@ async function updatePeopleEventAPI(id, object)
  *      
  *      object = {
  *                  name: ' xxxx ',
- *                  dates: ['yy-mm-dd', 'yy-mm-dd', ...],
+ *                  dates: ['yyyy-mm-dd', 'yyyy-mm-dd', ...],
  *                  author: ' xxxx ',
  *                  description: ' xxxx ',
  *              }
@@ -279,7 +279,7 @@ let updatePeopleVar =
         }],
 }
 
-async function wait()
+export async function wait()
 {
     await giveAllEventsAPI();
     await giveOneEventAPI("b407aa58f1b9");

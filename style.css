@@ -25,6 +25,35 @@ body header {
 body header h1 {
   font-family: "Seymour One", sans-serif;
 }
+body header .buttonForm {
+  margin-top: 1vh;
+  background: linear-gradient(to bottom, #5783ba 5%, #5783ba 100%);
+  background-color: #5783ba;
+  border-radius: 15px;
+  border: 2px solid #5783ba;
+  display: inline-block;
+  cursor: pointer;
+  color: #ffffff;
+  font-family: Trebuchet MS;
+  font-size: 2vh;
+  font-weight: bold;
+  padding: 1vh 1.3vh;
+  text-decoration: none;
+}
+@media screen and (min-width: 769px) {
+  body header .buttonForm {
+    margin-top: 0.5vh;
+    width: 20vh;
+  }
+}
+body header .buttonForm:hover {
+  background: linear-gradient(to bottom, #5783ba 5%, #5783ba 100%);
+  background-color: #5783ba;
+}
+body header .buttonForm:active {
+  position: relative;
+  top: 1px;
+}
 body header .createEvent {
   margin-top: 2vh;
   height: 20vh;
@@ -69,35 +98,6 @@ body header .createEvent .inputTXT, body header .createEvent .date {
   body header .createEvent .inputTXT, body header .createEvent .date {
     width: 18vw;
   }
-}
-body header .createEvent .buttonForm {
-  margin-top: 1vh;
-  background: linear-gradient(to bottom, #5783ba 5%, #5783ba 100%);
-  background-color: #5783ba;
-  border-radius: 15px;
-  border: 2px solid #5783ba;
-  display: inline-block;
-  cursor: pointer;
-  color: #ffffff;
-  font-family: Trebuchet MS;
-  font-size: 2vh;
-  font-weight: bold;
-  padding: 1vh 1.3vh;
-  text-decoration: none;
-}
-@media screen and (min-width: 769px) {
-  body header .createEvent .buttonForm {
-    margin-top: 0.5vh;
-    width: 20vh;
-  }
-}
-body header .createEvent .buttonForm:hover {
-  background: linear-gradient(to bottom, #5783ba 5%, #5783ba 100%);
-  background-color: #5783ba;
-}
-body header .createEvent .buttonForm:active {
-  position: relative;
-  top: 1px;
 }
 body main {
   display: flex;

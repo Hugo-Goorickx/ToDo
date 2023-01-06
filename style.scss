@@ -21,7 +21,7 @@ body
     position: relative;
     font-size: 1rem; 
     header
-    { 
+    {
         opacity: 0.9;
         background-color: white;
         z-index: 1;
@@ -37,6 +37,37 @@ body
         h1
         {
             font-family: 'Seymour One', sans-serif;
+        }
+        .buttonForm
+        {
+            margin-top: 1vh;
+            @include desktop
+            {
+                margin-top: 0.5vh;
+                width: 20vh;
+            }
+            background:linear-gradient(to bottom, #5783ba 5%, #5783ba 100%);
+            background-color:#5783ba;
+            border-radius:15px;
+            border:2px solid #5783ba;
+            display:inline-block;
+            cursor:pointer;
+            color:#ffffff;
+            font-family:Trebuchet MS;
+            font-size:2vh;
+            font-weight:bold;
+            padding:1vh 1.3vh;
+            text-decoration:none;
+            &:hover
+            {
+                background:linear-gradient(to bottom, #5783ba 5%, #5783ba 100%);
+                background-color:#5783ba;
+            }
+            &:active
+            {
+                position:relative;
+                top:1px;
+            }
         }
         .createEvent
         {
@@ -89,37 +120,7 @@ body
                 background-color: #AAD2F5;
                 border: 0;
             }
-            .buttonForm
-            {
-                margin-top: 1vh;
-                @include desktop
-                {
-                    margin-top: 0.5vh;
-                    width: 20vh;
-                }
-                background:linear-gradient(to bottom, #5783ba 5%, #5783ba 100%);
-                background-color:#5783ba;
-                border-radius:15px;
-                border:2px solid #5783ba;
-                display:inline-block;
-                cursor:pointer;
-                color:#ffffff;
-                font-family:Trebuchet MS;
-                font-size:2vh;
-                font-weight:bold;
-                padding:1vh 1.3vh;
-                text-decoration:none;
-                &:hover
-                {
-                    background:linear-gradient(to bottom, #5783ba 5%, #5783ba 100%);
-                    background-color:#5783ba;
-                }
-                &:active
-                {
-                    position:relative;
-                    top:1px;
-                }
-            }
+            
         }
     }
     main
