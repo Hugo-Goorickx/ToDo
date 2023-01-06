@@ -288,10 +288,97 @@ async function wait()
     await updateEventAPI("b407aa58f1b9", oldEventVar);
     await updateDatesEventAPI("b407aa58f1b9", updateDatesVar);
     await updateDatesEventAPI("b407aa58f1b9", oldDatesVar);
-    // await addPeopleEventAPI("b407aa58f1b9", newPeopleVar);
+    await addPeopleEventAPI("b407aa58f1b9", newPeopleVar);
     await updatePeopleEventAPI("b407aa58f1b9", updatePeopleVar);
     // await updatePeopleEventAPI("b407aa58f1b9", updatePeopleVar);
     // await deleteEventAPI("8cc8a9a99c47");
 }
 
-// wait();
+//wait();
+
+const classEvents  = class
+{
+    constructor(id, name, dates, author, description )
+    {
+        this.id = id;
+        this.name = name;
+        this.dates = dates;
+        this.author = author;
+        this.description = description;
+    }
+
+    create()
+    {
+        let arrayTrGuys = [];
+        let arrayNamesGuys = [];
+        
+        let firstTr = `<tr><td></td>`;
+        for (let elem of this.dates)
+        {
+            firstTr += `<td class="name">${elem.date}</td>`;
+            for (let elem1 of elem.attendees)
+            {
+                let positionArray = arrayNamesGuys.indexOf(elem1.name);
+                if (positionArray != -1)
+                    arrayTrGuys[positionArray] += (elem1.available)?"<td class='ok'></td>":"<td class='no'></td>";
+                else
+                {
+                    arrayNamesGuys.push(elem1.name);
+                    let insideTr = (elem1.available)?"<td class='ok'></td>":"<td class='no'></td>";
+                    arrayTrGuys.push(`<td class='name'>${elem1.name}</td>` + insideTr);
+                }
+            }
+        }
+        firstTr += `</tr>`;
+        for (let index = 0; index < arrayTrGuys.length; index++)
+            arrayTrGuys[index] += '</tr>';
+        let secondtr = `<tr>${arrayTrGuys.join('')}</tr>`;
+
+        let lasttr = `<tr>
+                        <td class="name">
+                            <input class="inputTXT" id="tEvent" type="text" required maxlength="30">
+                        </td>`;
+        for (let x = 0; x < this.dates.length; x++)
+            lasttr += ` <td class="no"></td>`;
+        lasttr += `</tr>`;
+
+        let main = document.getElementById('main');
+        main.innerHTML += ` <section class="event">
+                                <h2>
+                                    ${this.name}
+                                </h2>
+                                <p class="description">
+                                    ${this.description}
+                                </p>
+                                <table>
+                                    ${firstTr}
+                                    ${secondtr}
+                                    ${lasttr}
+                                </table>
+                                <button class="buttonDate" aria-label="buttonForm" id="formButton">Ajouter Personne</button>
+                                <section>
+                                    <button class="buttonLeftMiddle" aria-label="buttonForm" id="formButton">Ajouter Personne</button>
+                                    <button class="buttonLeftMiddle" aria-label="buttonForm" id="formButton">Ajouter Personne</button>
+                                    <button class="buttonDel" aria-label="buttonForm" id="formButton">Ajouter Personne</button>
+                                </section>
+                            </section>`;
+    }
+}
+
+let arrayEvents = []
+async function loadEvents()
+{
+    let x = await giveAllEventsAPI()
+    for (const elem of x)
+        arrayEvents.push( new classEvents(elem.id, elem.name, elem.dates, elem.author, elem.description) )
+    for (const elem of arrayEvents)
+        elem.create();
+}
+
+loadEvents()
+   
+    
+    
+
+    
+

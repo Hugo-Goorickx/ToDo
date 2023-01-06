@@ -5,6 +5,7 @@ body {
   font-style: italic;
   color: #5784BA;
   position: relative;
+  font-size: 1rem;
 }
 body header {
   opacity: 0.9;
@@ -13,19 +14,49 @@ body header {
   position: fixed;
   top: 0px;
   width: 100%;
-  height: 30vh;
+  height: 29vh;
   text-align: center;
-  font-size: 1rem;
+}
+@media screen and (min-width: 769px) {
+  body header {
+    height: 22vh;
+  }
 }
 body header h1 {
   font-family: "Seymour One", sans-serif;
 }
 body header .createEvent {
+  margin-top: 2vh;
+  height: 20vh;
   display: flex;
   flex-direction: column;
   text-align: center;
   justify-content: center;
   align-items: center;
+}
+body header .createEvent .test {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  white-space: wrap;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+@media screen and (min-width: 769px) {
+  body header .createEvent {
+    height: 14vh;
+    flex-direction: row;
+    flex-wrap: wrap;
+    flex-grow: 1;
+    margin-left: 8vw;
+    margin-right: 8vw;
+  }
+  body header .createEvent .test {
+    width: 20vw;
+    margin-left: 0.5vw;
+    margin-right: 0.5vw;
+  }
 }
 body header .createEvent .inputTXT, body header .createEvent .date {
   width: 80vw;
@@ -34,9 +65,13 @@ body header .createEvent .inputTXT, body header .createEvent .date {
   background-color: #AAD2F5;
   border: 0;
 }
+@media screen and (min-width: 769px) {
+  body header .createEvent .inputTXT, body header .createEvent .date {
+    width: 18vw;
+  }
+}
 body header .createEvent .buttonForm {
-  margin-top: 5vw;
-  width: 40vw;
+  margin-top: 1vh;
   background: linear-gradient(to bottom, #5783ba 5%, #5783ba 100%);
   background-color: #5783ba;
   border-radius: 15px;
@@ -45,10 +80,16 @@ body header .createEvent .buttonForm {
   cursor: pointer;
   color: #ffffff;
   font-family: Trebuchet MS;
-  font-size: 20px;
+  font-size: 2vh;
   font-weight: bold;
-  padding: 12px 16px;
+  padding: 1vh 1.3vh;
   text-decoration: none;
+}
+@media screen and (min-width: 769px) {
+  body header .createEvent .buttonForm {
+    margin-top: 0.5vh;
+    width: 20vh;
+  }
 }
 body header .createEvent .buttonForm:hover {
   background: linear-gradient(to bottom, #5783ba 5%, #5783ba 100%);
@@ -64,7 +105,12 @@ body main {
   text-align: center;
   justify-content: center;
   align-items: center;
-  margin-top: 30vh;
+  margin-top: 29vh;
+}
+@media screen and (min-width: 769px) {
+  body main {
+    margin-top: 22vh;
+  }
 }
 body main .event {
   margin-top: 2vh;
@@ -76,7 +122,6 @@ body main .event {
   color: black;
   border-radius: 5px/5px;
   border: 3px solid #F4CFDF;
-  height: 30vh;
   width: 80vw;
   background-color: #F4CFDF;
 }
@@ -113,6 +158,7 @@ body main .event .addGuy {
   width: 100%;
 }
 body main .event .buttonDate, body main .event .buttonLeftMiddle, body main .event .buttonDel {
+  margin-bottom: 1vh;
   width: 20vw;
   opacity: 0.7;
   border-radius: 15px;
@@ -120,10 +166,14 @@ body main .event .buttonDate, body main .event .buttonLeftMiddle, body main .eve
   cursor: pointer;
   color: #3A587C;
   font-family: Trebuchet MS;
-  font-size: 20px;
+  padding: 1vw 1.3vw;
   font-weight: bold;
-  padding: 12px 16px;
   text-decoration: none;
+}
+@media screen and (min-width: 769px) {
+  body main .event .buttonDate, body main .event .buttonLeftMiddle, body main .event .buttonDel {
+    padding: 0.5vh 0.75vh;
+  }
 }
 body main .event .buttonDate:hover, body main .event .buttonLeftMiddle:hover, body main .event .buttonDel:hover {
   opacity: 1;
