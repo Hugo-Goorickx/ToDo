@@ -1,9 +1,10 @@
-@mixin desktop {
-    @media screen and (min-width: 769px) {
+@mixin desktop
+{
+    @media screen and (min-width: 769px)
+    {
         @content
     }
 };
-
 
 //variables
 $light-blue:#AAD2F5;
@@ -11,13 +12,16 @@ $pink: #FCA8A8;
 $dark-blue: #5784BA;
 $light-pink:#F4CFDF;
 $text-color:#3A587C;
+$hHeaderMobile: 28vh;
+$hHeaderDesktop: 18vh;
+
 body
 {
     margin: 0;
     padding: 0;
-    font-family: 'Montserrat', sans-serif;
+    font-family:Trebuchet MS;
     font-style: italic;
-    color: #5784BA;
+    color: $dark-blue;
     position: relative;
     font-size: 1rem; 
     header
@@ -28,28 +32,22 @@ body
         position : fixed; 
         top: 0px;
         width: 100%;
-        height: 29vh;
-        @include desktop
-        {
-            height: 22vh;
-        }
+        height: $hHeaderMobile;
         text-align: center;
-        h1
-        {
-            font-family: 'Seymour One', sans-serif;
-        }
+        
+        @include desktop { height: $hHeaderDesktop; }
+        h1 { font-family: 'Seymour One', sans-serif; }
+
         .buttonForm
         {
-            margin-top: 1vh;
             @include desktop
             {
                 margin-top: 0.5vh;
                 width: 20vh;
             }
-            background:linear-gradient(to bottom, #5783ba 5%, #5783ba 100%);
-            background-color:#5783ba;
+            background-color:$dark-blue;
             border-radius:15px;
-            border:2px solid #5783ba;
+            border:2px solid $dark-blue;
             display:inline-block;
             cursor:pointer;
             color:#ffffff;
@@ -58,11 +56,8 @@ body
             font-weight:bold;
             padding:1vh 1.3vh;
             text-decoration:none;
-            &:hover
-            {
-                background:linear-gradient(to bottom, #5783ba 5%, #5783ba 100%);
-                background-color:#5783ba;
-            }
+
+            &:hover { background-color:$dark-blue; }
             &:active
             {
                 position:relative;
@@ -72,24 +67,23 @@ body
         .createEvent
         {
             margin-top: 2vh;
-            height: 20vh;
+            height: 16vh;
             display: flex;
             flex-direction: column;
             .test
             {
-            display: flex;
-            flex-direction: column;
-
+                display: flex;
+                flex-direction: column;
                 width: 100%;
                 white-space: wrap;
                 text-align: center;
                 justify-content: center;
                 align-items: center;
             }
+
             @include desktop
             {
-                height: 14vh;
-                
+                height: 6vh;
                 flex-direction: row;
                 flex-wrap: wrap;
                 flex-grow: 1;
@@ -100,27 +94,22 @@ body
                     width: 20vw;
                     margin-left: 0.5vw;
                     margin-right: 0.5vw;
-    
                 }
             }
+
             text-align: center;
             justify-content: center;
             align-items: center;
             .inputTXT, .date
             {
                 width: 80vw;
-                @include desktop
-                {
-                    width: 18vw;
-                    // margin-left: 1vh;
-                    // margin-right: 1vh;
-                }
+                @include desktop { width: 18vw; }
                 height: 2vh;
                 border-radius: 5px;
-                background-color: #AAD2F5;
+                background-color: $light-blue;
                 border: 0;
             }
-            
+
         }
     }
     main
@@ -130,12 +119,10 @@ body
         text-align: center;
         justify-content: center;
         align-items: center;
-        margin-top: 29vh;
-        @include desktop
-        {
-            margin-top: 22vh;
+        margin-top: $hHeaderMobile;
 
-        }
+        @include desktop { margin-top: $hHeaderDesktop; }
+
         .event
         {
             margin-top: 2vh;
@@ -147,9 +134,15 @@ body
             color: black;
             border-radius: 5px / 5px; 
             border: 3px solid #F4CFDF;
-            // height: 35vh;
             width: 80vw;
             background-color: #F4CFDF;
+            h2
+            {
+                font-weight:bold;
+                font-style: normal;
+                margin: 1vh 0 0 0;
+            }
+
             section
             {
                 display: flex;
@@ -157,12 +150,15 @@ body
                 text-align: center;
                 align-items: center;
             }
+
             .description
             {
                 background-color: #FFFFFF;
-                width: 98%;
+                min-height: 5vh;
+                width: 99%;
                 height: 30%;
             }
+
             table
             {
                 width: 100%;
@@ -173,23 +169,19 @@ body
                     width: 90%;
                 }
             }
-            .ok
-            {
-                background-color: #B5E48C;
-            }
-            .no
-            {
-                background-color: #FCA8A8;
-            }
+
+            .ok { background-color: #B5E48C; }
+
+            .no { background-color: #FCA8A8; }
+
             .name
             {
                 background-color: #FFFFFF;
                 width: 10%;
-            }   
-            .addGuy
-            {
-                width: 100%;
-            }
+            } 
+  
+            .addGuy  { width: 100%; }
+
             .buttonDate, .buttonLeftMiddle, .buttonDel
             {
                 margin-bottom: 1vh;
@@ -198,51 +190,47 @@ body
                 border-radius:15px;
                 display:inline-block;
                 cursor:pointer;
-                color:#3A587C;
+                color:$text-color;
                 font-family:Trebuchet MS;
-                // font-size:1vw;
                 padding:1vw 1.3vw;
-                @include desktop
-                {
-                    // font-size:1.5vh;
-                    padding:0.5vh 0.75vh;
 
-                }
+                @include desktop { padding:0.5vh 0.75vh; }
+
                 font-weight:bold;
                 text-decoration:none;
-                &:hover
-                {
-                    opacity: 1;
-                }
+
+                &:hover { opacity: 1; }
+
                 &:active
                 {
                     position:relative;
                     top:1px;
                 }
             }
+
             .buttonDate
             {
                 margin-top: 2vw;
                 width: 40vw;
-                background-color:#F4CFDF;
+                background-color:$light-pink;
                 border:5px solid #FFFFFF;
             }
-            .buttonLeftMiddle, .buttonDel
-            {
-                margin-top: 3vw;
-                margin-left: 1vw;
-                margin-right: 1vw;
-            }
+
+            .buttonLeftMiddle, .buttonDel { margin: 3vw 0 1vw 1vw; }
+
             .buttonLeftMiddle
             {
                 background-color:#FFFFFF;
                 border:5px solid #FFFFFF;
             }
+
             .buttonDel
             {
-                background-color:#FCA8A8;
-                border:5px solid #FCA8A8;
+                background-color:$pink;
+                border:5px solid $pink;
             }
         }
     }
 }
+
+// margin: h d b g;

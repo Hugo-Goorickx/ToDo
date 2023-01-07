@@ -1,7 +1,7 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: "Montserrat", sans-serif;
+  font-family: Trebuchet MS;
   font-style: italic;
   color: #5784BA;
   position: relative;
@@ -14,23 +14,21 @@ body header {
   position: fixed;
   top: 0px;
   width: 100%;
-  height: 29vh;
+  height: 28vh;
   text-align: center;
 }
 @media screen and (min-width: 769px) {
   body header {
-    height: 22vh;
+    height: 18vh;
   }
 }
 body header h1 {
   font-family: "Seymour One", sans-serif;
 }
 body header .buttonForm {
-  margin-top: 1vh;
-  background: linear-gradient(to bottom, #5783ba 5%, #5783ba 100%);
-  background-color: #5783ba;
+  background-color: #5784BA;
   border-radius: 15px;
-  border: 2px solid #5783ba;
+  border: 2px solid #5784BA;
   display: inline-block;
   cursor: pointer;
   color: #ffffff;
@@ -47,8 +45,7 @@ body header .buttonForm {
   }
 }
 body header .buttonForm:hover {
-  background: linear-gradient(to bottom, #5783ba 5%, #5783ba 100%);
-  background-color: #5783ba;
+  background-color: #5784BA;
 }
 body header .buttonForm:active {
   position: relative;
@@ -56,7 +53,7 @@ body header .buttonForm:active {
 }
 body header .createEvent {
   margin-top: 2vh;
-  height: 20vh;
+  height: 16vh;
   display: flex;
   flex-direction: column;
   text-align: center;
@@ -74,7 +71,7 @@ body header .createEvent .test {
 }
 @media screen and (min-width: 769px) {
   body header .createEvent {
-    height: 14vh;
+    height: 6vh;
     flex-direction: row;
     flex-wrap: wrap;
     flex-grow: 1;
@@ -105,11 +102,11 @@ body main {
   text-align: center;
   justify-content: center;
   align-items: center;
-  margin-top: 29vh;
+  margin-top: 28vh;
 }
 @media screen and (min-width: 769px) {
   body main {
-    margin-top: 22vh;
+    margin-top: 18vh;
   }
 }
 body main .event {
@@ -125,6 +122,11 @@ body main .event {
   width: 80vw;
   background-color: #F4CFDF;
 }
+body main .event h2 {
+  font-weight: bold;
+  font-style: normal;
+  margin: 1vh 0 0 0;
+}
 body main .event section {
   display: flex;
   flex-direction: row;
@@ -133,7 +135,8 @@ body main .event section {
 }
 body main .event .description {
   background-color: #FFFFFF;
-  width: 98%;
+  min-height: 5vh;
+  width: 99%;
   height: 30%;
 }
 body main .event table {
@@ -189,9 +192,7 @@ body main .event .buttonDate {
   border: 5px solid #FFFFFF;
 }
 body main .event .buttonLeftMiddle, body main .event .buttonDel {
-  margin-top: 3vw;
-  margin-left: 1vw;
-  margin-right: 1vw;
+  margin: 3vw 0 1vw 1vw;
 }
 body main .event .buttonLeftMiddle {
   background-color: #FFFFFF;
