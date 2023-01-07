@@ -11,11 +11,11 @@ export async function formulaire()
     let tDate = document.getElementById('tDate');
     if (tEvent.value == '' || tDescrp.value == '' || tAutor.value == '' || tDate.value == '')
         alert("Il vous manque une ou plusieurs donnees");
-    else if (tEvent.value.length <= 256 || tDescrp.value.length <= 256 || tAutor.value.length <= 256 || tDate.value.length <= 256)
+    else if (tEvent.value.length >= 256 || tDescrp.value.length >= 256 || tAutor.value.length >= 256 || tDate.value.length >= 256)
         alert("Taille maximum pour une entree est de 256 caracteres");
     else
     {
-        pushEventAPI({
+        await pushEventAPI({
                         "name": tEvent.value,
                         "dates": [tDate.value],
                         "author": tAutor.value,

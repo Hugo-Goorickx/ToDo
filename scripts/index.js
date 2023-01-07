@@ -1,6 +1,12 @@
 import { formulaire } from "./formulaire.js";
 import { Event } from "./Event.js";
 import { giveAllEventsAPI } from "./manipsAPI.js";
+import { deleteEventAPI } from "./manipsAPI.js";
+
+function test(x) {
+    
+    console.log("test" + x);
+}
 
 document.getElementById("formButton").addEventListener("click", async function ()
 {
@@ -22,6 +28,14 @@ function addEventOnDate()
             listTd = elem.getElementsByTagName('tr')[elem.getElementsByTagName('tr').length - 1].getElementsByTagName('td')
             for (let posTr = 1; posTr < listTd.length; posTr++)
                 listTd[posTr].addEventListener('click', function (x) { return function() { x.className = (x.className =='no')?'ok':'no'; } } ( listTd[posTr] ), false);
+            //Ajouter qlq 1
+            elem.getElementsByTagName('button')[0].onclick = function () {test(elem.id)};
+            //Modifier les elements de l'event
+            elem.getElementsByTagName('button')[1].onclick = function () {test(elem.id)};
+            //Ajouter une date
+            elem.getElementsByTagName('button')[2].onclick = function () {test(elem.id)};
+            //Supprimer
+            elem.getElementsByTagName('button')[3].onclick = async function () {test(elem.id)};
         }
     }
 }
