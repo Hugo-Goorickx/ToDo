@@ -4,8 +4,8 @@ In this repository, you will find our project that finalizes our basic learning 
 
 This site is responsive and includes a mobile version and a desktop version. It uses an personnal API to work.
 
-![](./imgs/desltop_tempalte.png)
-![](./imgs/phone_tempalte.png)
+![](./imgs/desktop_template.png)
+![](./imgs/phone_template.png)
 
 ---
 
