@@ -76,13 +76,9 @@ body header .createEvent .test {
     flex-direction: row;
     flex-wrap: wrap;
     flex-grow: 1;
-    margin-left: 8vw;
-    margin-right: 8vw;
   }
   body header .createEvent .test {
     width: 20vw;
-    margin-left: 0.5vw;
-    margin-right: 0.5vw;
   }
 }
 body header .createEvent .inputTXT, body header .createEvent .date {
