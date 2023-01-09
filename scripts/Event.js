@@ -59,6 +59,7 @@ export const Event  = class
                                 <p class="description">
                                     ${this.description}
                                 </p>
+                                <div class = "scroll__card">
                                 <table>
                                     <tr>
                                         <td></td> 
@@ -73,6 +74,7 @@ export const Event  = class
                                         </td>
                                         ${`<td class="no"></td>`.repeat(this.dates.length) + `</tr>`}
                                 </table>
+                                </div>
                                 <button class="buttonDate" aria-label="buttonForm" id="formButton">Valider</button>
                                 <section>
                                     <button class="buttonLeftMiddle" aria-label="buttonForm" id="formButton">Modifier</button>

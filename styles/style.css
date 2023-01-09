@@ -14,12 +14,12 @@ body header {
   position: fixed;
   top: 0px;
   width: 100%;
-  height: 28vh;
+  height: 32vh;
   text-align: center;
 }
 @media screen and (min-width: 769px) {
   body header {
-    height: 20vh;
+    height: 22vh;
   }
 }
 body header h1 {
@@ -37,6 +37,7 @@ body header .buttonForm {
   font-weight: bold;
   padding: 1vh 1.3vh;
   text-decoration: none;
+  margin-top: 3.5vw;
 }
 @media screen and (min-width: 769px) {
   body header .buttonForm {
@@ -102,11 +103,11 @@ body main {
   text-align: center;
   justify-content: center;
   align-items: center;
-  margin-top: 28vh;
+  margin-top: 32vh;
 }
 @media screen and (min-width: 769px) {
   body main {
-    margin-top: 20vh;
+    margin-top: 22vh;
   }
 }
 body main .event {
@@ -202,27 +203,42 @@ body main .event .buttonDel {
   background-color: #FCA8A8;
   border: 5px solid #FCA8A8;
 }
+body .scroll__card {
+  overflow: auto;
+  width: 75vw;
+}
 
 .nightmode {
-  width: 2vw;
-  height: 1vw;
+  width: 6vw;
+  height: 3vw;
   border-radius: 5vw;
-  color: black;
-  border: black solid 0.1vw;
+  color: #5784BA;
+  border: #5784BA solid 0.2vw;
   position: absolute;
-  top: 1.8vw;
-  right: 9.5vw;
+  top: 2vw;
+  right: 2vw;
   display: flex;
+}
+@media screen and (min-width: 769px) {
+  .nightmode {
+    width: 3vw;
+    height: 1.5vw;
+  }
 }
 .nightmode::before {
   content: "";
   position: absolute;
-  width: 0.95vw;
-  background-color: black;
-  height: 0.95vw;
+  width: 2.8vw;
+  background-color: #5784BA;
+  height: 2.8vw;
   border-radius: 5vw;
-  transform: translateY(0.02vw) translateX(0.02vw);
-  transition: all 0.2s ease-in-out;
+  transform: translateY(0.06vw);
+}
+@media screen and (min-width: 769px) {
+  .nightmode::before {
+    width: 1.4vw;
+    height: 1.4vw;
+  }
 }
 
 .night h1 {
@@ -285,16 +301,26 @@ body main .event .buttonDel {
 .night .event .no {
   background-image: url("https://www.clker.com/cliparts/s/d/p/v/b/K/x-mark-white-md.png");
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: 4vw;
   background-position: center;
   background-color: #434343;
+}
+@media screen and (min-width: 769px) {
+  .night .event .no {
+    background-size: 1vw;
+  }
 }
 .night .event .ok {
   background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/White_check.svg/1200px-White_check.svg.png");
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: 4vw;
   background-position: center;
   background-color: #434343;
+}
+@media screen and (min-width: 769px) {
+  .night .event .ok {
+    background-size: 1vw;
+  }
 }
 .night .buttonForm {
   background: #F37500;
@@ -302,11 +328,16 @@ body main .event .buttonDel {
   border: #F37500;
 }
 .night .nightmode {
-  border: #F37500 solid 0.1vw;
+  border: #F37500 solid;
 }
 .night .nightmode::before {
-  transform: translateX(1.1vw);
+  transform: translateX(3vw) translateY(0.1vw);
   background-color: #F37500;
+}
+@media screen and (min-width: 769px) {
+  .night .nightmode::before {
+    transform: translateX(1.5vw) translateY(0.05vw);
+  }
 }
 .night * {
   color: #A7A7A7;

@@ -3,7 +3,7 @@ import { Event } from "./Event.js";
 import { giveAllEventsAPI } from "./manipsAPI.js";
 import { deleteEventAPI } from "./manipsAPI.js";
 import { addOne } from "./addPeople.js";
-import { modifEvent } from "./ModifierBtn.js";
+import { modifEvent } from "./modifierBtn.js";
 import  {addDate } from "./addDate.js";
 
 function test(x) {

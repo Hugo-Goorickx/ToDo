@@ -12,8 +12,8 @@ $pink: #FCA8A8;
 $dark-blue: #5784BA;
 $light-pink:#F4CFDF;
 $text-color:#3A587C;
-$hHeaderMobile: 28vh;
-$hHeaderDesktop: 20vh;
+$hHeaderMobile: 32vh;
+$hHeaderDesktop: 22vh;
 
 body
 {
@@ -56,6 +56,7 @@ body
             font-weight:bold;
             padding:1vh 1.3vh;
             text-decoration:none;
+            margin-top: 3.5vw;
 
             &:hover { background-color:$dark-blue; }
             &:active
@@ -136,6 +137,8 @@ body
             border: 3px solid #F4CFDF;
             width: 80vw;
             background-color: #F4CFDF;
+            
+         
             h2
             {
                 font-weight:bold;
@@ -149,6 +152,7 @@ body
                 flex-direction: row;
                 text-align: center;
                 align-items: center;
+                
             }
 
             .description
@@ -163,6 +167,8 @@ body
             {
                 width: 100%;
                 text-align: center;
+
+              
                 .inputTXT
                 {
                     border: 0;
@@ -231,30 +237,45 @@ body
             }
         }
     }
+    .scroll__card{
+        
+            overflow: auto;
+            width: 75vw;
+        
+        
+    }
 }
 
 // margin: h d b g;
 
 //nightmode
 .nightmode {
-    width: 2vw;
-    height: 1vw;
+    width: 6vw;
+    height: 3vw;
     border-radius: 5vw;
-    color: black;
-    border: black solid 0.1vw;
+    color: $dark-blue;
+    border: $dark-blue solid 0.2vw;
     position: absolute;
-    top: 1.8vw;
-    right: 9.5vw;
+    top: 2vw;
+    right: 2vw;
     display: flex;
+    @include desktop
+    {
+      width: 3vw;
+      height: 1.5vw;
+    }
     &::before {
       content: "";
       position: absolute;
-      width: 0.95vw;
-      background-color: black;
-      height: 0.95vw;
+      width: 2.8vw;
+      background-color: $dark-blue;
+      height: 2.8vw;
       border-radius: 5vw;
-      transform: translateY(0.02vw) translateX(0.02vw);
-      transition: all 0.2s ease-in-out;
+      transform: translateY(0.06vw) ;
+      @include desktop{
+        width: 1.4vw;
+      height: 1.4vw;
+      }
     }}
   
  // changement color  
@@ -321,17 +342,29 @@ body
            .no{
             background-image: url('https://www.clker.com/cliparts/s/d/p/v/b/K/x-mark-white-md.png');
             background-repeat: no-repeat;
-            background-size: contain;
+    
+            background-size: 4vw;
             background-position: center;
             background-color: #434343;
+            @include desktop
+            {
+               background-size: 1vw;
+            }
          }
+       
          .ok{
             background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/White_check.svg/1200px-White_check.svg.png');
             background-repeat: no-repeat;
-            background-size: contain;
+
+            background-size: 4vw;
             background-position: center;
             background-color: #434343;
+            @include desktop
+            {
+               background-size: 1vw;
+            }
          }
+        
     }
 
     .buttonForm{
@@ -340,10 +373,13 @@ body
         border: #F37500;
     }
             .nightmode {
-                border: #F37500 solid 0.1vw;
+                border: #F37500 solid ;
             &::before {
-                transform: translateX(1.1vw);
+                transform: translateX(3vw) translateY(0.1vw);
                 background-color: #F37500;
+                @include desktop{
+                    transform: translateX(1.5vw) translateY(0.05vw);
+                }
             }
             }
             *{
