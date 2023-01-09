@@ -1,13 +1,14 @@
 body {
-  margin: 0;
   padding: 0;
   font-family: Trebuchet MS;
   font-style: italic;
   color: #5784BA;
   position: relative;
   font-size: 1rem;
+  max-width: 1400px;
 }
 body header {
+  margin: 0;
   opacity: 0.9;
   background-color: white;
   z-index: 1;
@@ -134,6 +135,11 @@ body main .event section {
   text-align: center;
   align-items: center;
 }
+body main .event .author {
+  min-height: 1vh;
+  width: 99%;
+  margin: 0 0 0.5vh 0;
+}
 body main .event .description {
   background-color: #FFFFFF;
   min-height: 5vh;
@@ -246,6 +252,9 @@ body .scroll__card {
 }
 .night h2 {
   background-color: transparent;
+}
+.night .author {
+  background-color: #343434;
 }
 .night header #formButton {
   background-color: #F37500;

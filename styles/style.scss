@@ -17,15 +17,17 @@ $hHeaderDesktop: 22vh;
 
 body
 {
-    margin: 0;
+    
     padding: 0;
     font-family:Trebuchet MS;
     font-style: italic;
     color: $dark-blue;
     position: relative;
     font-size: 1rem; 
+    max-width: 1400px;
     header
     {
+        margin: 0;
         opacity: 0.9;
         background-color: white;
         z-index: 1;
