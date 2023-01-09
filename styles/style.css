@@ -94,6 +94,10 @@ body header .createEvent .inputTXT, body header .createEvent .date {
   }
 }
 body main {
+  max-width: 1000px;
+  min-width: 345px;
+  width: 80%;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
   text-align: center;
@@ -116,7 +120,7 @@ body main .event {
   color: black;
   border-radius: 5px/5px;
   border: 3px solid #F4CFDF;
-  width: 80vw;
+  width: 100%;
   background-color: #F4CFDF;
 }
 body main .event h2 {
@@ -164,14 +168,14 @@ body main .event .addGuy {
 }
 body main .event .buttonDate, body main .event .buttonLeftMiddle, body main .event .buttonDel {
   margin-bottom: 1vh;
-  width: 20vw;
+  width: 40%;
   opacity: 0.7;
   border-radius: 15px;
   display: inline-block;
   cursor: pointer;
   color: #3A587C;
   font-family: Trebuchet MS;
-  padding: 1vw 1.3vw;
+  padding: 1% 1.3%;
   font-weight: bold;
   text-decoration: none;
 }
@@ -206,7 +210,7 @@ body main .event .buttonDel {
 }
 body .scroll__card {
   overflow: auto;
-  width: 75vw;
+  width: 80%;
 }
 
 .nightmode {
