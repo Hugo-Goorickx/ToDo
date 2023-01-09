@@ -1,5 +1,3 @@
-const nightmode = document.querySelector(".nightmode");
-const body =document.querySelector("body");
-nightmode.addEventListener("click", () => {
-   body.classList.toggle('night');
+document.querySelector(".nightmode").addEventListener("click", () => {
+   document.querySelector("body").classList.toggle('night');
 })

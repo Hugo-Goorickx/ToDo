@@ -59,21 +59,24 @@ export const Event  = class
                                 <p class="description">
                                     ${this.description}
                                 </p>
+                                <p class='author'>
+                                    Cree par ${this.author}
+                                </p>
                                 <div class = "scroll__card">
-                                <table>
-                                    <tr>
-                                        <td></td> 
-                                        ${firstTr}
-                                    </tr>
-                                    <tr>
-                                        ${arrayTrGuys.join('')}
-                                    </tr>
-                                    <tr>
-                                        <td class="name">
-                                            <input class="inputTXT" id="name${this.id}" type="text" required maxlength="256" placeholder="Entrez un nom">
-                                        </td>
-                                        ${`<td class="no"></td>`.repeat(this.dates.length) + `</tr>`}
-                                </table>
+                                    <table>
+                                        <tr>
+                                            <td></td> 
+                                            ${firstTr}
+                                        </tr>
+                                        <tr>
+                                            ${arrayTrGuys.join('')}
+                                        </tr>
+                                        <tr>
+                                            <td class="name">
+                                                <input class="inputTXT" id="name${this.id}" type="text" required maxlength="256" placeholder="Entrez un nom">
+                                            </td>
+                                            ${`<td class="no"></td>`.repeat(this.dates.length) + `</tr>`}
+                                    </table>
                                 </div>
                                 <button class="buttonDate" aria-label="buttonForm" id="formButton">Valider</button>
                                 <section>

@@ -154,7 +154,12 @@ body
                 align-items: center;
                 
             }
-
+            .author
+            {
+                min-height: 1vh;
+                width: 99%;
+                margin: 0 0 0.5vh 0;
+            }
             .description
             {
                 background-color: #FFFFFF;
@@ -285,6 +290,10 @@ body
         }
         h2{
         background-color: transparent;
+        }
+        .author
+        {
+            background-color: #343434;
         }
         header {
             #formButton{

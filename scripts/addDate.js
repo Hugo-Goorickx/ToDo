@@ -1,36 +1,25 @@
 import { updateDatesEventAPI } from "./manipsAPI.js";
 
-export async function  addDate(id){
-    let day = prompt ("Ajoute le jour (jj)");
-    if (day > 31){
-        alert ('au format (dd)');
+/**
+ * Take a new date to add in the event
+ * 
+ * @param {*} id the event's id
+ * @returns 
+ */
+export async function  addDate(id)
+{
+    let date = [];
+    date.unshift(prompt ("Ajoute le jour (jj)"));
+    date.unshift(prompt ("Ajoute le mois (mm)"));
+    date.unshift(prompt ("Ajoute le jour (aaaa)"));
+    if (date[0] < 2023 || date[0] > 2100 || date[1] > 12 || date[2] > 31)
+    {
+        alert ('Format incorrect');
         return
     }
 
-    let month = prompt ("Ajoute le mois (mm)");
-    if (month > 12){
-    alert ('au format (mm)');
-    return
-    }
+    if (!confirm ('Voulez-vous vraiment ajouter cette date?'))
+        return;
 
-    let years = prompt ("Ajoute le jour (aaaa)");
-    if (years < 2023 || years > 2100){
-    alert ('au format (aaaa)');
-    return
-    }
-
-
-    let date = years +'-'+ month + '-' + day;
-
-    let confirmDate = confirm ('Voulez-vous vraiment ajouter cette date?');
-
-    date ? confirmDate : '';
-
-
-    confirmDate ? await updateDatesEventAPI(id,{"dates": [date]}) : '';
-
+    await updateDatesEventAPI(id,{"dates": [date.join('-')]});
 }
-
-
-
-
