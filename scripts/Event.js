@@ -69,7 +69,7 @@ export const Event  = class
                                     </tr>
                                     <tr>
                                         <td class="name">
-                                            <input class="inputTXT" id="tEvent" type="text" required maxlength="30" placeholder="Entrez un nom">
+                                            <input class="inputTXT" id="name${this.id}" type="text" required maxlength="256" placeholder="Entrez un nom">
                                         </td>
                                         ${`<td class="no"></td>`.repeat(this.dates.length) + `</tr>`}
                                 </table>
