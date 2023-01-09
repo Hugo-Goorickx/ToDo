@@ -1,6 +1,6 @@
-#Kitchen-Project
+# Kitchen-Project
 
-In this repository, you will find our project that finalizes our basic learning of DOM oriented Javascript.
+In this repository, you will find our project that finalizes our basic learning of DOM oriented Javascript, the use of APIs as well as the presence of dark mode.
 
 This site is responsive and includes a mobile version and a desktop version. It uses an personnal API to work.
 
