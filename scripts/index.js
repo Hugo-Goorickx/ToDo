@@ -2,6 +2,7 @@ import { formulaire } from "./formulaire.js";
 import { Event } from "./Event.js";
 import { giveAllEventsAPI } from "./manipsAPI.js";
 import { deleteEventAPI } from "./manipsAPI.js";
+import  {addDate } from "./addDate.js";
 
 function test(x) {
     
@@ -32,8 +33,8 @@ function addEventOnDate()
             elem.getElementsByTagName('button')[0].onclick = function () {test(elem.id)};
             //Modifier les elements de l'event
             elem.getElementsByTagName('button')[1].onclick = function () {test(elem.id)};
-            //Ajouter une date
-            elem.getElementsByTagName('button')[2].onclick = function () {test(elem.id)};
+            //Ajouter une date remplacer le test(elem.id) par la fonction creer 
+            elem.getElementsByTagName('button')[2].onclick = async function () {await addDate(elem.id);loadEvents()};
             //Supprimer
             elem.getElementsByTagName('button')[3].onclick = async function () {test(elem.id)};
         }
@@ -58,3 +59,7 @@ async function loadEvents()
 }
 
 loadEvents();
+
+
+//add date button 
+
