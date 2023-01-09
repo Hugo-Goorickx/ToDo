@@ -13,7 +13,7 @@ $dark-blue: #5784BA;
 $light-pink:#F4CFDF;
 $text-color:#3A587C;
 $hHeaderMobile: 28vh;
-$hHeaderDesktop: 18vh;
+$hHeaderDesktop: 20vh;
 
 body
 {
@@ -234,3 +234,125 @@ body
 }
 
 // margin: h d b g;
+
+//nightmode
+.nightmode {
+    width: 2vw;
+    height: 1vw;
+    border-radius: 5vw;
+    color: black;
+    border: black solid 0.1vw;
+    position: absolute;
+    top: 1.8vw;
+    right: 9.5vw;
+    display: flex;
+    &::before {
+      content: "";
+      position: absolute;
+      width: 0.95vw;
+      background-color: black;
+      height: 0.95vw;
+      border-radius: 5vw;
+      transform: translateY(0.02vw) translateX(0.02vw);
+      transition: all 0.2s ease-in-out;
+    }}
+  
+ // changement color  
+    .night {
+        h1{
+        color: #F37500;
+        }
+        h2{
+        background-color: transparent;
+        }
+        header {
+            #formButton{
+            background-color: #F37500;
+            color: #ffffff;
+            border: none;
+            }
+            .createEvent .date{
+                background-color: #434343;
+            }
+            #tAutor{
+                background-color: #434343;
+            }
+            #tDescrp{
+                background-color: #434343;
+            }
+            #tEvent{
+                background-color: #434343;
+            }
+    }
+    .event{
+        background: rgba(67, 67, 67, 0.5);;
+        border: none;
+        section{
+            background-color: #343434;
+        }
+        .description{
+            background-color: #242424;
+           }
+           .buttonLeftMiddle{
+            background-color: #444343;
+            border: none;
+            color: white;
+           }
+           .buttonDel{
+            border: #F37500 solid 0.2vw;
+            color: #F37500;
+            background-color: transparent;
+           }
+           .buttonDate{
+          border: none;
+            color: white;
+            background-color: #F37500;
+           }
+           .name{
+            background-color:#444343 ;
+           }
+           table{
+            background-color: #343434;
+            
+               .inputTXT{
+                background-color: #444343;
+            }
+           }
+           .no{
+            background-image: url('https://www.clker.com/cliparts/s/d/p/v/b/K/x-mark-white-md.png');
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: center;
+            background-color: #434343;
+         }
+         .ok{
+            background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/White_check.svg/1200px-White_check.svg.png');
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: center;
+            background-color: #434343;
+         }
+    }
+
+    .buttonForm{
+        background: #F37500;
+        background-color: #F37500;
+        border: #F37500;
+    }
+            .nightmode {
+                border: #F37500 solid 0.1vw;
+            &::before {
+                transform: translateX(1.1vw);
+                background-color: #F37500;
+            }
+            }
+            *{
+                color: #A7A7A7;
+                background-color: #242424;
+                opacity: 1;
+            }
+            td{
+                background-color: #343434;
+            }
+       }
+ 
