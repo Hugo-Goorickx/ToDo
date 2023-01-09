@@ -19,7 +19,7 @@ body header {
 }
 @media screen and (min-width: 769px) {
   body header {
-    height: 18vh;
+    height: 20vh;
   }
 }
 body header h1 {
@@ -106,7 +106,7 @@ body main {
 }
 @media screen and (min-width: 769px) {
   body main {
-    margin-top: 18vh;
+    margin-top: 20vh;
   }
 }
 body main .event {
@@ -201,4 +201,118 @@ body main .event .buttonLeftMiddle {
 body main .event .buttonDel {
   background-color: #FCA8A8;
   border: 5px solid #FCA8A8;
+}
+
+.nightmode {
+  width: 2vw;
+  height: 1vw;
+  border-radius: 5vw;
+  color: black;
+  border: black solid 0.1vw;
+  position: absolute;
+  top: 1.8vw;
+  right: 9.5vw;
+  display: flex;
+}
+.nightmode::before {
+  content: "";
+  position: absolute;
+  width: 0.95vw;
+  background-color: black;
+  height: 0.95vw;
+  border-radius: 5vw;
+  transform: translateY(0.02vw) translateX(0.02vw);
+  transition: all 0.2s ease-in-out;
+}
+
+.night h1 {
+  color: #F37500;
+}
+.night h2 {
+  background-color: transparent;
+}
+.night header #formButton {
+  background-color: #F37500;
+  color: #ffffff;
+  border: none;
+}
+.night header .createEvent .date {
+  background-color: #434343;
+}
+.night header #tAutor {
+  background-color: #434343;
+}
+.night header #tDescrp {
+  background-color: #434343;
+}
+.night header #tEvent {
+  background-color: #434343;
+}
+.night .event {
+  background: rgba(67, 67, 67, 0.5);
+  border: none;
+}
+.night .event section {
+  background-color: #343434;
+}
+.night .event .description {
+  background-color: #242424;
+}
+.night .event .buttonLeftMiddle {
+  background-color: #444343;
+  border: none;
+  color: white;
+}
+.night .event .buttonDel {
+  border: #F37500 solid 0.2vw;
+  color: #F37500;
+  background-color: transparent;
+}
+.night .event .buttonDate {
+  border: none;
+  color: white;
+  background-color: #F37500;
+}
+.night .event .name {
+  background-color: #444343;
+}
+.night .event table {
+  background-color: #343434;
+}
+.night .event table .inputTXT {
+  background-color: #444343;
+}
+.night .event .no {
+  background-image: url("https://www.clker.com/cliparts/s/d/p/v/b/K/x-mark-white-md.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  background-color: #434343;
+}
+.night .event .ok {
+  background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/White_check.svg/1200px-White_check.svg.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  background-color: #434343;
+}
+.night .buttonForm {
+  background: #F37500;
+  background-color: #F37500;
+  border: #F37500;
+}
+.night .nightmode {
+  border: #F37500 solid 0.1vw;
+}
+.night .nightmode::before {
+  transform: translateX(1.1vw);
+  background-color: #F37500;
+}
+.night * {
+  color: #A7A7A7;
+  background-color: #242424;
+  opacity: 1;
+}
+.night td {
+  background-color: #343434;
 }/*# sourceMappingURL=style.css.map */
