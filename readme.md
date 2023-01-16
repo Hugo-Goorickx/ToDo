@@ -1,4 +1,4 @@
-# Kitchen-Project
+# Didlydoo
 
 In this repository, you will find our project that finalizes our basic learning of DOM oriented Javascript, the use of APIs as well as the presence of dark mode.
 
